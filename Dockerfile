@@ -7,8 +7,7 @@ ENV LANG en_US.UTF-8
 
 RUN apt-get update
 RUN apt-get install -y software-properties-common
-RUN LC_ALL=C.UTF-8 add-apt-repository -y ppa:ondrej/php
-
+RUN add-apt-repository -y ppa:ondrej/php
 
 #setup timezone
 RUN apt-get install -y tzdata
@@ -101,6 +100,8 @@ RUN apt-get install -y zip
 RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 RUN php composer-setup.php --install-dir=/usr/local/bin --filename=composer
 
+# Install OCR
+RUN apt-get install -y tesseract-ocr
 
 RUN apt-get clean
 
