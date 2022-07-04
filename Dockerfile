@@ -102,6 +102,8 @@ RUN php composer-setup.php --install-dir=/usr/local/bin --filename=composer
 
 # Install OCR
 RUN apt-get install -y tesseract-ocr
+RUN apt-get install -y tesseract-ocr-heb
+RUN apt-get install -y tesseract-ocr-all
 
 RUN apt-get clean
 
