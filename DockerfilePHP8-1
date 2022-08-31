@@ -38,10 +38,10 @@ RUN apt-get install -y nano
 RUN apt-get install -y wget
 
 #setup php
-#RUN wget 'http://mirrors.kernel.org/ubuntu/pool/multiverse/liba/libapache-mod-fastcgi/libapache2-mod-fastcgi_2.4.7~0910052141-1.2_amd64.deb'
-#RUN dpkg -i libapache2-mod-fastcgi_2.4.7~0910052141-1.2_amd64.deb
-RUN wget 'http://launchpadlibrarian.net/213554207/libapache2-mod-fastcgi_2.4.7~0910052141-1.2_arm64.deb'
-RUN dpkg -i libapache2-mod-fastcgi_2.4.7~0910052141-1.2_arm64.deb
+RUN wget 'http://mirrors.kernel.org/ubuntu/pool/multiverse/liba/libapache-mod-fastcgi/libapache2-mod-fastcgi_2.4.7~0910052141-1.2_amd64.deb'
+RUN dpkg -i libapache2-mod-fastcgi_2.4.7~0910052141-1.2_amd64.deb
+# RUN wget 'http://launchpadlibrarian.net/213554207/libapache2-mod-fastcgi_2.4.7~0910052141-1.2_arm64.deb'
+# RUN dpkg -i libapache2-mod-fastcgi_2.4.7~0910052141-1.2_arm64.deb
 RUN a2enmod actions
 RUN apt-get install -y php8.1-fpm
 RUN apt-get install -y gcc make autoconf libc-dev pkg-config
